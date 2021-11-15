@@ -26,6 +26,26 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => Str::random(60),
                 'role_id'        => $role->id,
             ]);
+
+            $role = Role::where('name', 'publisher')->firstOrFail();
+
+            User::create([
+                'name'           => 'Publisher',
+                'email'          => 'publisher@publisher.com',
+                'password'       => bcrypt('password'),
+                'remember_token' => Str::random(60),
+                'role_id'        => $role->id,
+            ]);
+
+            $role = Role::where('name', 'user')->firstOrFail();
+
+            User::create([
+                'name'           => 'User Default',
+                'email'          => 'user@user.com',
+                'password'       => bcrypt('password'),
+                'remember_token' => Str::random(60),
+                'role_id'        => $role->id,
+            ]);
         }
     }
 }
