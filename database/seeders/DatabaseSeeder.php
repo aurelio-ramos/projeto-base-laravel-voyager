@@ -3,9 +3,13 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use TCG\Voyager\Traits\Seedable;
 
 class DatabaseSeeder extends Seeder
 {
+    use Seedable;
+
+    protected $seedersPath;
     /**
      * Seed the application's database.
      *
@@ -18,5 +22,8 @@ class DatabaseSeeder extends Seeder
 	        VoyagerDatabaseSeeder::class,	        
 	        VoyagerDummyDatabaseSeeder::class,
 		]);
+        //arquivos gerados pelo seeder de BREADS
+        $this->seedersPath = database_path('seeds').'/breads'.'/';
+        $this->seed('VoyagerDeploymentOrchestratorSeeder');
     }
 }
