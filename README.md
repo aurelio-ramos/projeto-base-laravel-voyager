@@ -90,9 +90,9 @@ Acesso à área privada da aplicação:
 > **URL:** http://domínio/admin <br/> 
 
 Usuários criados:
-> **Admin** login: ```admin@admin.com``` senha: ```password```
-> **Publisher** login: ```publisher@publisher.com``` senha: ```password```
-> **User** login: ```user@user.com``` senha: ```password```
+- **Admin** login: ```admin@admin.com``` senha: ```password```
+- **Publisher** login: ```publisher@publisher.com``` senha: ```password```
+- **User** login: ```user@user.com``` senha: ```password```
 
 **Criar usuário pelo terminal usando tinker:**
 ```bash
